@@ -58,10 +58,10 @@ void TaxCal::QuickSub(int level)
 			m_quickSub = 0;
 			break;
 		case LevelTwo:
-			m_quickSub = 105;
+			m_quickSub = 1500*(0.1 - 0.03);
 			break;
 		case LevelThree:
-			m_quickSub = 555;
+			m_quickSub = 1500*(0.1 - 0.03) + 4500*(0.2 - 0.1);
 			break;
 		default:
 			break;
