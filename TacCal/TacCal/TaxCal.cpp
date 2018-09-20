@@ -8,6 +8,15 @@ enum Taxlevel
 	LevelThree
 };
 
+enum TaxNum
+{
+	LevelOneTaxNum = 1500,
+	LevelTwoTaxNum = 4500,
+	LevelThreeTaxNum = 9000
+};
+
+
+
 //enum TaxRate
 //{
 //	LeveLOneRate = 3%,
@@ -17,7 +26,7 @@ enum Taxlevel
 
 static double levelOneRate = 0.03;
 static double levelTwoRate = 0.1;
-static double levelThreeRate = 0.15;
+static double levelThreeRate = 0.2;
 
 TaxCal::TaxCal(void)
 {
@@ -58,10 +67,10 @@ void TaxCal::QuickSub(int level)
 			m_quickSub = 0;
 			break;
 		case LevelTwo:
-			m_quickSub = 105;
+			m_quickSub = 1500*(levelTwoRate - levelOneRate);
 			break;
 		case LevelThree:
-			m_quickSub = 555;
+			m_quickSub = 1500*(levelTwoRate - levelOneRate) + 4500*(levelThreeRate - levelTwoRate);
 			break;
 		default:
 			break;
