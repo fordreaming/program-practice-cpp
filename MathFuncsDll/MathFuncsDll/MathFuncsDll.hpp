@@ -1,0 +1,9 @@
+// MathFuncsDll.h
+
+#ifdef MATHFUNCSDLL_EXPORTS
+#define MATHFUNCSDLL_API __declspec(dllexport) 
+#else
+#define MATHFUNCSDLL_API __declspec(dllimport) 
+#include "MyMathFuncs.h"
+#endif
+//Èç¹ûÔÚ
